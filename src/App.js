@@ -4,11 +4,17 @@ import "draft-js/dist/Draft.css";
 import { Editor, EditorState } from "draft-js";
 import React from "react";
 
+const MyInput = () => {
+  const [value, setValue] = React.useState('')
+  const onChange = (e) => setValue(e.target.value)
+  return <input value={value} onChange={onChange} />
+}
+
 function MyEditor() {
   const [editorState, setEditorState] = React.useState(() =>
-    EditorState.createEmpty()
+    EditorState.createEmpty(),
   );
-  return <Editor editorState={editorState} onChange={setEditorState} />;
+  return <Editor placeholder="Enter some text..." editorState={editorState} onChange={setEditorState} />;
 }
 
 function App() {
@@ -18,7 +24,7 @@ function App() {
         <Button variant="outlined">Hello</Button>
         <Button variant="outlined">Hello</Button>
         <MyEditor />
-        <meta charset="utf-8" />
+        <MyInput />
         <meta name="viewport" content="initial-scale=1, eidth=devide-width" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
