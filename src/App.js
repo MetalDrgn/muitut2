@@ -5,16 +5,30 @@ import { Editor, EditorState } from "draft-js";
 import React from "react";
 
 const MyInput = () => {
-  const [value, setValue] = React.useState('')
-  const onChange = (e) => setValue(e.target.value)
-  return <input value={value} onChange={onChange} />
-}
+  const [value, setValue] = React.useState("");
+  const onChange = (e) => setValue(e.target.value);
+  return <input value={value} onChange={onChange} />;
+};
 
 function MyEditor() {
   const [editorState, setEditorState] = React.useState(() =>
-    EditorState.createEmpty(),
+    EditorState.createEmpty()
   );
-  return <Editor placeholder="Enter some text..." editorState={editorState} onChange={setEditorState} />;
+  const editor = React.useRef(null);
+  function focusEditor() {
+    console.log(editor.current);
+    editor.current.focus();
+  }
+  return (
+    <div className="editor" onClick={focusEditor}>
+      <Editor
+        ref={editor}
+        placeholder="Enter some text..."
+        editorState={editorState}
+        onChange={setEditorState}
+      />
+    </div>
+  );
 }
 
 function App() {
