@@ -12,6 +12,7 @@
   min-height: 6em;
   width: 235px;
   cursor: text;
+  margin:1em;
 }
 
 @media (prefers-reduced-motion: no-preference) {

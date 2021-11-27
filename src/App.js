@@ -16,7 +16,7 @@ function MyEditor() {
   );
   const editor = React.useRef(null);
   function focusEditor() {
-    console.log(editor.current);
+    // console.log(editor.current.editor.innerText);
     editor.current.focus();
   }
   return (
@@ -35,11 +35,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Button variant="outlined">Hello</Button>
+        {/* <Button variant="outlined" onClick={focusEditor}>Hello</Button> */}
         <Button variant="outlined">Hello</Button>
         <MyEditor />
         <MyInput />
-        <meta name="viewport" content="initial-scale=1, eidth=devide-width" />
+        <meta name="viewport" content="initial-scale=1, width=devide-width" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
