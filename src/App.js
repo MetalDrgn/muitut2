@@ -85,7 +85,7 @@ function App() {
         slow
         <input
           type="number"
-          value="number"
+          value={number}
           onChange={(e) => setNumber(parseInt(e.target.value))}
         />
         <br />
