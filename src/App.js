@@ -62,10 +62,12 @@ function App() {
   // slow func setup
   const [number, setNumber] = React.useState(0);
   const [dark, setDark] = React.useState(false);
-  const doubleNumber = React.useMemo(() => {return slowfunc(number)}, [number]);
+  const doubleNumber = React.useMemo(() => {
+    return slowfunc(number);
+  }, [number]);
   const themeStyles = {
     backgroundColor: dark ? "black" : "white",
-    color: dark ? "white" : "black"
+    color: dark ? "white" : "black",
   };
 
   return (
@@ -83,14 +85,14 @@ function App() {
         <br />
         -----------
         <br />
-        slow
+        slow - useMemo
         <input
           type="number"
           value={number}
           onChange={(e) => setNumber(parseInt(e.target.value))}
         />
         <br />
-        <button onClick={() => setDark(p => !p)}>toggle dark</button>
+        <button onClick={() => setDark((p) => !p)}>toggle dark</button>
         <div style={themeStyles}>{doubleNumber}</div>
         <br />
         -----------
