@@ -3,6 +3,7 @@ import Button from "@mui/material/Button";
 import "draft-js/dist/Draft.css";
 import { Editor, EditorState } from "draft-js";
 import React from "react";
+import Context from "./Context";
 
 const MyInput = () => {
   const [value, setValue] = React.useState("");
@@ -82,6 +83,11 @@ function App() {
           +
         </Button>
         count: {state}
+        <br />
+        -----------
+        <br />
+        useContext
+        <Context />
         <br />
         -----------
         <br />
