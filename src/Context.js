@@ -1,4 +1,6 @@
 import React from "react";
+import FunctionContextComponent from "./FunctionContextComponent";
+import ClassContextComponent from "./ClassContextComponent";
 
 export const ThemeContext = React.createContext();
 
@@ -13,10 +15,11 @@ function Context() {
     <>
       <ThemeContext.Provider value={darkThm}>
         <button onClick={toggleThm}>Toggle Theme</button>
-        
+        {/* <FunctionContextComponent /> */}
+        <ClassContextComponent />
       </ThemeContext.Provider>
     </>
-    )
+  );
 }
 
 export default Context;
