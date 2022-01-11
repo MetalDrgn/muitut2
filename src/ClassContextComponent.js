@@ -1,4 +1,4 @@
-import { ThemeContext } from "./Context";
+// import { ThemeContext } from "./Context";
 import React from "react";
 
 export default class ClassContextComponent extends React.Component {
