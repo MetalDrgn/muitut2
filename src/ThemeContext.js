@@ -7,7 +7,7 @@ export function useTheme() {
   return useContext(ThemeContext);
 }
 
-export function useThemeUpdate(ThemeUpdateContext) {
+export function useThemeUpdate() {
   return useContext(ThemeUpdateContext);
 }
 

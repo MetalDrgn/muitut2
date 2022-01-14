@@ -14,7 +14,7 @@ function Context() {
 
   return (
     <>
-      <ThemeProvider value={darkThm}>
+      <ThemeProvider>
       {/* <ThemeContext.Provider value={darkThm}> */}
         
         <FunctionContextComponent />
