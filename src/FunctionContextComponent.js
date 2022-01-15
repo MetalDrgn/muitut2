@@ -7,9 +7,9 @@ export default function FunctionContextComponent() {
   const toggleThm = useThemeUpdate();
   const themeStyles = {
     backgroundColor: darkTheme ? "#333" : "#ccc",
-    color: darkTheme ? "#fff" : "#000",
-    padding: "2em",
-    margin: "2em",
+    color: darkTheme ? "#8f4" : "#c30",
+    padding: "1em",
+    margin: "1em",
   };
   return (
     <>
